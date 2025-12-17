@@ -3,58 +3,47 @@
 const levels = [
   {
     question: "Quando você percebeu que não era só crush e que realmente gostava de mim?",
-    rewardMsg: "Esse dia mora no meu coração.",
-    rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjNyY3d2NnR0MmFvbTd0bDRodW42c29jcjd4aG5jbGZubW12c2tnZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nP8zrCOp5plDf7DNjr/giphy.gif"
+    rewardMsg: "Percebi hoje ao despertar: sem uma mensagem sua, o sol até nasce, mas meu dia não brilha do mesmo jeito.",
   },
   {
     question: "Qual momento nosso você mais queria reviver agora, exatamente do jeitinho que foi?",
-    rewardMsg: "Queria congelar esse momento também.",
-    rewardImg: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGJ2anI2MGU2Z2JmcGYweGF2N25uMHA2Mnc2Mm00NWlobmZhbTV4ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZJ1elswlnO1iFpq6Bn/giphy.gif"
+    rewardMsg: "Ver você chegando foi como assistir a um sonho criando vida e caminhando em minha direção.",
   },
   {
     question: "Se tivesse que me descrever com três palavras, quais seriam?",
-    rewardMsg: "Vou guardar essas três palavras pra sempre.",
-    rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmZyMW0wOW14d2llczBxcnA0ZHg3dm04NmFhc25zdnhoMHFuaG56MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/F7HZJkbC9piohwiR6N/giphy.gif"
+    rewardMsg: "Única em essência, brilhante em mente, e maravilhosamente minha."
   },
   {
     question: "Qual foi o momento mais romântico que você já viveu comigo até hoje?",
-    rewardMsg: "Prometo criar muitos outros momentos assim.",
-    rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHJ2bDA5ZWd0N3NxdGZyeGtxOW0zb2RzbW1ub3J1NDV0bHQ4b2J0aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7wDm3KFvhpzfB8MJDh/giphy.gif"
+    rewardMsg: "quando te dei o anel de papel, naquele anel cabia o mundo, mas foi no seu olhar que encontrei o universo mais lindo que verei em toda a minha existência pós recebe-lo."
   },
   {
     question: "Se nossa história fosse um filme, que título você daria para ele?",
-    rewardMsg: "Com esse título, certeza que ganhava um Oscar.",
-    rewardImg: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGJ2anI2MGU2Z2JmcGYweGF2N25uMHA2Mnc2Mm00NWlobmZhbTV4ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZJ1elswlnO1iFpq6Bn/giphy.gif"
+    rewardMsg: "O Roteiro da Vida: Uma história que escrevemos juntos, cena por cena, onde o 'fim' não existe, apenas o 'continua'..."
   },
   {
     question: "Qual é a pequena coisa do dia a dia que eu faço e que mais te faz sentir amada?",
-    rewardMsg: "Vou fazer isso com ainda mais carinho agora.",
-    rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjNyY3d2NnR0MmFvbTd0bDRodW42c29jcjd4aG5jbGZubW12c2tnZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nP8zrCOp5plDf7DNjr/giphy.gif"
+    rewardMsg: "É no cuidado de me buscar, quando eu nao mando mensagem, voce me manda."
   },
   {
     question: "Quando você pensa no nosso futuro, qual é a primeira cena que vem na sua cabeça?",
-    rewardMsg: "Adorei imaginar essa cena com você.",
-    rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmZyMW0wOW14d2llczBxcnA0ZHg3dm04NmFhc25zdnhoMHFuaG56MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/F7HZJkbC9piohwiR6N/giphy.gif"
+    rewardMsg: "Vejo o caos mais perfeito: eu no sofá, nossos filhos correndo livres e sua voz me gritando para para-los."
   },
   {
     question: "Qual música você acha que mais combina com a nossa história?",
-    rewardMsg: "Toda vez que essa música tocar, vou lembrar de você.",
-    rewardImg: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGJ2anI2MGU2Z2JmcGYweGF2N25uMHA2Mnc2Mm00NWlobmZhbTV4ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZJ1elswlnO1iFpq6Bn/giphy.gif"
+    rewardMsg: "Como em 'Beija-Flor' de João Gomes: nossa melodia tem saudade, tem chamego e a certeza de que meu lugar é com você."
   },
   {
     question: "O que você mais ama em mim que não dá pra ver em foto nem em vídeo?",
-    rewardMsg: "Isso é exatamente o que eu mais quero cuidar em você.",
-    rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjNyY3d2NnR0MmFvbTd0bDRodW42c29jcjd4aG5jbGZubW12c2tnZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nP8zrCOp5plDf7DNjr/giphy.gif"
+    rewardMsg: "Seu olhar quando está pertinho de mim."
   },
   {
     question: "Se pudesse fazer um pedido sobre nós dois e ter certeza que se realizaria, qual pedido você faria?",
-    rewardMsg: "Agora vou viver pra tentar realizar esse pedido.",
-    rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHJ2bDA5ZWd0N3NxdGZyeGtxOW0zb2RzbW1ub3J1NDV0bHQ4b2J0aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7wDm3KFvhpzfB8MJDh/giphy.gif"
+    rewardMsg: "Pediria sabedoria divina para ser o guardião exclusivo dos seus sorrisos, banindo qualquer dor para que seu coração só conheça a paz."
   },
   {
     question: "Então… topa continuar escrevendo essa história comigo, capítulo por capítulo, pelo resto da vida?",
-    rewardMsg: "Então vem, que nosso ‘felizes para sempre’ começa agora.",
-    rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHJ2bDA5ZWd0N3NxdGZyeGtxOW0zb2RzbW1ub3J1NDV0bHQ4b2J0aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7wDm3KFvhpzfB8MJDh/giphy.gif"
+    rewardMsg: "Então vem, me dê a mão, que nosso 'felizes para sempre' não é um destino, é a jornada que começa agora."
   }
 ];
 
@@ -77,7 +66,6 @@ const ui = {
     input: document.getElementById('answer-input'),
     error: document.getElementById('error-msg'),
     rewardArea: document.getElementById('reward-area'),
-    rewardImg: document.getElementById('reward-img'),
     rewardMsg: document.getElementById('reward-msg'),
     btn: document.getElementById('action-btn')
 };
@@ -85,6 +73,33 @@ const ui = {
 function switchScreen(screenName) {
     Object.values(screens).forEach(s => s.classList.remove('active'));
     screens[screenName].classList.add('active');
+}
+
+// ... existing code ...
+
+function showReward() {
+    isRewardPhase = true;
+    
+    // Esconde input, mostra recompensa
+    ui.inputArea.classList.add('hidden');
+    ui.rewardArea.classList.remove('hidden');
+    
+    ui.rewardMsg.innerText = levels[currentLevel].rewardMsg;
+    
+    ui.btn.innerText = "Próxima >>";
+    
+    // Esconde botão voltar durante recompensa
+    const prevBtn = document.getElementById('prev-btn');
+    if(prevBtn) prevBtn.classList.add('hidden');
+    
+    // Efeito sonoro sutil (opcional, navegadores bloqueiam autoplay as vezes)
+    // aqui focamos no visual
+    confetti({
+        particleCount: 50,
+        spread: 60,
+        origin: { y: 0.7 },
+        colors: ['#a29bfe', '#6c5ce7']
+    });
 }
 
 function startGame() {
@@ -201,31 +216,7 @@ function loadProgress() {
     }
 }
 
-function showReward() {
-    isRewardPhase = true;
-    
-    // Esconde input, mostra recompensa
-    ui.inputArea.classList.add('hidden');
-    ui.rewardArea.classList.remove('hidden');
-    
-    ui.rewardImg.src = levels[currentLevel].rewardImg;
-    ui.rewardMsg.innerText = levels[currentLevel].rewardMsg;
-    
-    ui.btn.innerText = "Próxima >>";
-    
-    // Esconde botão voltar durante recompensa
-    const prevBtn = document.getElementById('prev-btn');
-    if(prevBtn) prevBtn.classList.add('hidden');
-    
-    // Efeito sonoro sutil (opcional, navegadores bloqueiam autoplay as vezes)
-    // aqui focamos no visual
-    confetti({
-        particleCount: 50,
-        spread: 60,
-        origin: { y: 0.7 },
-        colors: ['#a29bfe', '#6c5ce7']
-    });
-}
+
 
 function shakeError() {
     // ... existing code ...
