@@ -1,58 +1,85 @@
-# 💘 Desafio Rápido - Quiz Interativo
+# 💘 Quiz Casal & Desafio Romântico
 
-Um projeto web interativo e romântico criado para desafiar uma pessoa especial (namorado/a, crush, amigo/a) com um quiz personalizado. O jogo salva o progresso automaticamente, permite revisão de respostas e recompensa o usuário com poemas e elogios.
+Uma aplicação web interativa e imersiva criada para surpreender uma pessoa especial. O projeto combina um quiz personalizado com recompensas poéticas, efeitos visuais envolventes e uma seção final de dedicatórias.
 
-## 📸 Funcionalidades
+## ✨ Detalhes do Projeto
 
-- **Navegação Completa**: Botões "Voltar" e "Próxima" permitem que o usuário revise e edite suas respostas a qualquer momento.
-- **Salvamento Automático**: 
-  - **Local**: O progresso é salvo no navegador (`localStorage`). Se a página for fechada, o jogo continua exatamente de onde parou.
-  - **Remoto (GitHub)**: Opção configurável para salvar as respostas em um repositório privado do GitHub.
-- **Área de Atividades e Poemas**: Uma tela final interativa onde o usuário pode clicar em ícones para ler poemas personalizados sobre características que você ama nele(a).
-- **Background Animado**: Fundo gradiente suave e corações flutuantes.
-- **Responsividade Aprimorada**: Layout otimizado para celulares, ajustando-se automaticamente quando o teclado virtual é aberto.
+### 🎮 Mecânica do Quiz
+- **Interação Conversacional**: Ao responder cada pergunta, o sistema "responde" com uma mensagem poética e personalizada, criando um diálogo entre o jogo e o usuário.
+- **Navegação Flexível**: O usuário pode navegar livremente entre as perguntas (botões "Voltar" e "Próxima") para revisar ou alterar respostas anteriores.
+- **Persistência de Dados**: O progresso é salvo automaticamente no navegador (`localStorage`). Se a página for fechada, o jogo continua exatamente de onde parou.
+- **Integração Opcional com GitHub**: Possibilidade de configurar o salvamento remoto das respostas em um repositório privado.
 
-## 🚀 Como Usar
+### 🎨 Experiência Visual (UI/UX)
+- **Design Glassmorphism**: Interface moderna translúcida que se adapta ao fundo.
+- **Background Vivo**: Gradiente animado em constante movimento suave.
+- **Elementos Flutuantes**: Animação de corações que sobem pela tela aleatoriamente.
+- **Feedback Visual**:
+  - ✨ Chuva de confetes ao acertar/avançar.
+  - ⚠️ Efeito de "tremida" (shake) ao tentar avançar sem responder.
+- **Responsividade Total**: Layout otimizado para celulares, com suporte para ajuste de altura quando o teclado virtual está ativo.
 
-1. **Clone ou baixe** este repositório.
-2. Abra o arquivo `index.html` no seu navegador.
-3. Para personalizar, edite o arquivo `script.js`:
-   - Procure pelo array `levels`.
-   - Altere as perguntas (`question`), as mensagens (`rewardMsg`) e as imagens (`rewardImg`).
-   - Edite o objeto `poems` para alterar os textos da área "Sobre você".
+### 🎵 Atmosfera Sonora
+- **Player de Música**: Trilha sonora ambiente ("A Very Brady Special" - Kevin MacLeod).
+- **Controle de Áudio**: Botão flutuante Play/Pause com indicação visual de estado.
 
-## ☁️ Configuração de Salvamento no GitHub (Opcional)
+### 📜 Módulo de Poemas (Pós-Quiz)
+Ao finalizar o questionário, uma nova seção é desbloqueada:
+- **Lista de Atividades**: Ícones interativos representando detalhes da pessoa (Olhos, Boca, Cheiro, etc.).
+- **Modais de Leitura**: Ao clicar, um modal elegante exibe um poema dedicado àquela característica específica.
+- **Botão Promessa**: Uma declaração final especial.
 
-Se você deseja receber as respostas do seu amor diretamente no seu GitHub:
+---
 
-1. Crie um **Personal Access Token** no GitHub (Settings > Developer Settings > Personal Access Tokens).
-2. Crie um repositório (pode ser privado) para receber os arquivos.
-3. No arquivo `script.js`, procure a função `saveToGitHub` e preencha:
-   ```javascript
-   const GITHUB_TOKEN = "SEU_TOKEN_AQUI"; 
-   const REPO_OWNER = "SEU_USUARIO";
-   const REPO_NAME = "NOME_DO_REPO";
+## 🚀 Instalação e Uso
+
+Este projeto não requer instalação de dependências complexas (Node.js/NPM são opcionais, usados apenas para deploy).
+
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/seu-usuario/quiz-casal.git
    ```
-   > ⚠️ **Atenção**: Se hospedar o site publicamente, seu token ficará exposto. Recomenda-se usar essa função apenas em uso local ou em repositórios privados controlados.
+2. **Execute**: Basta abrir o arquivo `index.html` em qualquer navegador moderno.
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Personalização
 
-- **HTML5 & CSS3**: Estrutura semântica e animações CSS (`keyframes`).
-- **JavaScript (ES6+)**: Lógica de estado (`userAnswers`), manipulação do DOM e `Async/Await` para API do GitHub.
-- **Bibliotecas**:
-  - [Canvas Confetti](https://www.kirilv.com/canvas-confetti/): Efeitos de celebração.
-  - [Google Fonts](https://fonts.google.com/): Fonte 'Outfit'.
+Toda o conteúdo é editável no arquivo `script.js`:
 
-## 🎨 Personalização
-
-As cores principais podem ser alteradas facilmente no arquivo `style.css`:
-
-```css
-:root {
-    --primary-color: #6c5ce7;
-    --secondary-color: #a29bfe;
-    /* ... */
-}
+### Editar Perguntas e Recompensas
+Modifique o array `levels`:
+```javascript
+const levels = [
+  {
+    question: "Sua pergunta aqui?",
+    rewardMsg: "Sua resposta poética/carinhosa aqui."
+  },
+  // ...
+];
 ```
 
-Divirta-se criando seu desafio! ❤️
+### Editar Poemas
+Modifique o objeto `poems` no final do arquivo:
+```javascript
+const poems = {
+    "olhos": {
+        title: "Seus Olhos",
+        text: "Seu texto poético..."
+    },
+    // ...
+};
+```
+
+### Configurar Salvamento Remoto (GitHub)
+Para receber as respostas em um repositório:
+1. Gere um **Personal Access Token** no GitHub.
+2. No `script.js`, atualize a função `saveToGitHub` com seu Token, Usuário e Nome do Repositório.
+
+## 💻 Tecnologias
+
+- **Frontend**: HTML5 Semântico, CSS3 (Variáveis, Flexbox, Keyframes), JavaScript ES6+.
+- **Bibliotecas**: [Canvas Confetti](https://www.kirilv.com/canvas-confetti/) (efeitos de partículas).
+- **Fontes**: [Outfit](https://fonts.google.com/specimen/Outfit) (Google Fonts).
+
+---
+
+Feito com ❤️ para celebrar o amor.

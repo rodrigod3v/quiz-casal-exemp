@@ -454,7 +454,10 @@ const poemModal = document.getElementById('poem-modal');
 const modalTitle = document.getElementById('modal-title');
 const modalText = document.getElementById('modal-text');
 
+let currentPoemId = null;
+
 function openPoem(id) {
+    currentPoemId = id;
     const content = poems[id];
     if (content) {
         modalTitle.innerText = content.title;
@@ -466,15 +469,26 @@ function openPoem(id) {
 function closePoem(event) {
     if (event.target === poemModal || event.target.tagName === 'BUTTON') {
         poemModal.classList.remove('active');
+        
+        // Se fechou a promessa, vai para a tela de agradecimento
+        if (currentPoemId === 'promessa') {
+            setTimeout(() => {
+                showScreen('thankYou');
+            }, 300); // Pequeno delay para a modal fechar visualmente antes
+        }
+        currentPoemId = null;
     }
 }
 
 // Atualizar screens object
 screens.activities = document.getElementById('activities-screen');
+screens.thankYou = document.getElementById('thank-you-screen');
 
 // Atualizar função switchScreen (opcional, se precisar de lógica extra)
 function showScreen(screenName) {
-    switchScreen(screenName);
+    if (screens[screenName]) {
+        switchScreen(screenName);
+    }
 }
 
 // Tentativa de iniciar música ao carregar (pode ser bloqueado pelo navegador)
