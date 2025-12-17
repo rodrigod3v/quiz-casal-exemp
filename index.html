@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Um Desafio para Você</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-anim"></div>
+    <div class="hearts-container"></div>
+
+    <button id="music-btn" class="music-btn" onclick="toggleMusic()">🎵</button>
+
+    <main class="container">
+        <!-- TELA INICIAL -->
+        <section id="start-screen" class="screen active">
+            <div class="icon-header">👀</div>
+            <h1>Oi, meu amor!</h1>
+            <p>Se você acertar algumas perguntinhas sobre nós, tem um prêmio especial te esperando.</p>
+            <button onclick="startGame()" class="btn-primary">Aceito o desafio</button>
+        </section>
+
+        <!-- TELA DE PERGUNTAS -->
+        <section id="level-screen" class="screen">
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+
+            <h2 id="level-title">Pergunta 1</h2>
+
+            <div class="card-content">
+                <p id="question-text" class="fade-in">...</p>
+
+                <div id="reward-area" class="hidden">
+                    <img id="reward-img" class="image-reward" src="" alt="Recompensa">
+                    <p id="reward-msg">Muito bem!</p>
+                </div>
+
+                <div id="input-area">
+                    <input type="text" id="answer-input" placeholder="Sua resposta..." autocomplete="off">
+                    <div id="error-msg" class="error-msg hidden">Ops! Tenta puxar na memória... 😅</div>
+                </div>
+            </div>
+
+            <button id="action-btn" onclick="checkAnswer()" class="btn-primary">Responder</button>
+        </section>
+
+        <!-- TELA FINAL -->
+        <section id="final-screen" class="screen">
+            <div class="icon-header">🏆</div>
+            <h1>Mandou bem demais!</h1>
+            <p>Uau, você lembra mesmo!</p>
+
+            <div class="final-reward-box">
+                <p>Como prêmio, tenho algo pra você...</p>
+            </div>
+
+            <button onclick="showScreen('activities')" class="btn-primary"
+                style="margin-top: 15px; display: inline-block;">
+                VER
+            </button>
+        </section>
+
+        <!-- TELA DE ATIVIDADES -->
+        <section id="activities-screen" class="screen">
+            <div class="icon-header">🥰</div>
+            <h1>Sobre você</h1>
+            <p>Clique para ler um poema...</p>
+
+            <ul class="activity-list">
+                <li class="activity-item" onclick="openPoem('olhos')">
+                    <span class="check-icon">👀</span>
+                    <span>Seus olhos</span>
+                </li>
+                <li class="activity-item" onclick="openPoem('boca')">
+                    <span class="check-icon">👄</span>
+                    <span>Sua boca</span>
+                </li>
+                <li class="activity-item" onclick="openPoem('cheiro')">
+                    <span class="check-icon">🌺</span>
+                    <span>Seu cheiro</span>
+                </li>
+                <li class="activity-item" onclick="openPoem('voz')">
+                    <span class="check-icon">🎶</span>
+                    <span>Sua voz</span>
+                </li>
+                <li class="activity-item" onclick="openPoem('jeito')">
+                    <span class="check-icon">✨</span>
+                    <span>Seu jeito</span>
+                </li>
+                <li class="activity-item" onclick="openPoem('cabelo')">
+                    <span class="check-icon">💇‍♀️</span>
+                    <span>Seu Cabelo</span>
+                </li>
+                <li class="activity-item" onclick="openPoem('maos')">
+                    <span class="check-icon">👐</span>
+                    <span>Suas Mãos</span>
+                </li>
+                <li class="activity-item" onclick="openPoem('pele')">
+                    <span class="check-icon">✨</span>
+                    <span>Sua Pele</span>
+                </li>
+                <li class="activity-item" onclick="openPoem('corpo')">
+                    <span class="check-icon">💃</span>
+                    <span>Seu Corpo</span>
+                </li>
+            </ul>
+
+            <div style="margin-top: 20px; display: flex; justify-content: center; gap: 15px;">
+                <button onclick="showScreen('start')" class="btn-primary" style="flex: 1;">
+                    &laquo; Voltar
+                </button>
+                <button onclick="openPoem('promessa')" class="btn-primary"
+                    style="flex: 1; background: linear-gradient(to right, #e17055, #fab1a0);">
+                    🤞 Promessa
+                </button>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- MODAL -->
+    <div id="poem-modal" class="modal-overlay" onclick="closePoem(event)">
+        <div class="modal-content">
+            <h2 id="modal-title" class="modal-title">Título</h2>
+            <p id="modal-text" class="modal-text">Texto do poema aqui...</p>
+            <button class="btn-primary" onclick="closePoem(event)">Fechar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
