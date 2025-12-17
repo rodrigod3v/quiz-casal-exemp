@@ -1,55 +1,61 @@
 // CONFIGURAÇÃO DAS PERGUNTAS
 // Substitua as 'answers' pelas respostas reais dela.
-// 'keywords' é uma lista de palavras aceitas na resposta para considerar correta.
 const levels = [
-    {
-        question: "Duvido você lembrar: qual era a cor do meu boné no nosso primeiro encontro?",
-        keywords: ["preto", "Preto", "Preto", "s"], // Coloque palavras chaves da resposta aqui
-        rewardMsg: "Boa! Essa marcou, né?",
-        rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjNyY3d2NnR0MmFvbTd0bDRodW42c29jcjd4aG5jbGZubW12c2tnZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nP8zrCOp5plDf7DNjr/giphy.gif"
-    },
-    {
-        question: "Pergunta rápida: qual foi a primeira coisa que eu disse que era bonita em ti? (Dica: cabelo, rosto ou olhos).",
-        keywords: ["olhos", "Olhos", "Olhos", "s"], // Exemplo
-        rewardMsg: "Acertou! Me conhece bem demais.",
-        rewardImg: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGJ2anI2MGU2Z2JmcGYweGF2N25uMHA2Mnc2Mm00NWlobmZhbTV4ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZJ1elswlnO1iFpq6Bn/giphy.gif"
-    },
-    {
-        question: "Qual foi a primeira coisa que pedi para comer?",
-        keywords: ["tapioca", "Tapioca", "Tapioca", "s"], // Exemplo
-        rewardMsg: "Isso!",
-        rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmZyMW0wOW14d2llczBxcnA0ZHg3dm04NmFhc25zdnhoMHFuaG56MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/F7HZJkbC9piohwiR6N/giphy.gif"
-    },
-    {
-        question: "O nosso beijo encaixou?",
-        keywords: ["sim", "Sim", "Sim", "s"], // Exemplo
-        rewardMsg: "UHULLLLLL",
-        rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHJ2bDA5ZWd0N3NxdGZyeGtxOW0zb2RzbW1ub3J1NDV0bHQ4b2J0aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7wDm3KFvhpzfB8MJDh/giphy.gif"
-    },
-    {
-        question: "Se tivéssemos uma filha hoje, qual nome você escolheria sem pensar duas vezes?",
-        keywords: ["Agatha", "Ágatha", "agatha", "s"], 
-        rewardMsg: "Lindo nome!",
-        rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjNyY3d2NnR0MmFvbTd0bDRodW42c29jcjd4aG5jbGZubW12c2tnZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nP8zrCOp5plDf7DNjr/giphy.gif"
-    },
-    {
-        question: "Na nossa futura casa, você se imagina mais como uma 'pessoa de cachorros' ou 'pessoa de gatos'?",
-        keywords: ["cachorro", "gato", "ambos", "pets"],
-        rewardMsg: "Nossa casa vai ser animada!",
-        rewardImg: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGJ2anI2MGU2Z2JmcGYweGF2N25uMHA2Mnc2Mm00NWlobmZhbTV4ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZJ1elswlnO1iFpq6Bn/giphy.gif"
-    },
-    {
-        question: "Na sua opinião, qual é o tempo 'ideal' de conversa antes de oficializar um namoro?",
-        keywords: ["meses", "dias", "tempo"],
-        rewardMsg: "O tempo é relativo quando a gente ama.",
-        rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmZyMW0wOW14d2llczBxcnA0ZHg3dm04NmFhc25zdnhoMHFuaG56MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/F7HZJkbC9piohwiR6N/giphy.gif"
-    },
-    {
-        question: "Namoraria comigo pra sempre?",
-        keywords: ["sim", "claro", "com certeza", "sempre", "s"],
-        rewardMsg: "Promessa é dívida! ❤️",
-        rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHJ2bDA5ZWd0N3NxdGZyeGtxOW0zb2RzbW1ub3J1NDV0bHQ4b2J0aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7wDm3KFvhpzfB8MJDh/giphy.gif"
-    }
+  {
+    question: "Quando você percebeu que não era só crush e que realmente gostava de mim?",
+    rewardMsg: "Esse dia mora no meu coração.",
+    rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjNyY3d2NnR0MmFvbTd0bDRodW42c29jcjd4aG5jbGZubW12c2tnZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nP8zrCOp5plDf7DNjr/giphy.gif"
+  },
+  {
+    question: "Qual momento nosso você mais queria reviver agora, exatamente do jeitinho que foi?",
+    rewardMsg: "Queria congelar esse momento também.",
+    rewardImg: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGJ2anI2MGU2Z2JmcGYweGF2N25uMHA2Mnc2Mm00NWlobmZhbTV4ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZJ1elswlnO1iFpq6Bn/giphy.gif"
+  },
+  {
+    question: "Se tivesse que me descrever com três palavras, quais seriam?",
+    rewardMsg: "Vou guardar essas três palavras pra sempre.",
+    rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmZyMW0wOW14d2llczBxcnA0ZHg3dm04NmFhc25zdnhoMHFuaG56MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/F7HZJkbC9piohwiR6N/giphy.gif"
+  },
+  {
+    question: "Qual foi o momento mais romântico que você já viveu comigo até hoje?",
+    rewardMsg: "Prometo criar muitos outros momentos assim.",
+    rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHJ2bDA5ZWd0N3NxdGZyeGtxOW0zb2RzbW1ub3J1NDV0bHQ4b2J0aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7wDm3KFvhpzfB8MJDh/giphy.gif"
+  },
+  {
+    question: "Se nossa história fosse um filme, que título você daria para ele?",
+    rewardMsg: "Com esse título, certeza que ganhava um Oscar.",
+    rewardImg: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGJ2anI2MGU2Z2JmcGYweGF2N25uMHA2Mnc2Mm00NWlobmZhbTV4ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZJ1elswlnO1iFpq6Bn/giphy.gif"
+  },
+  {
+    question: "Qual é a pequena coisa do dia a dia que eu faço e que mais te faz sentir amada?",
+    rewardMsg: "Vou fazer isso com ainda mais carinho agora.",
+    rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjNyY3d2NnR0MmFvbTd0bDRodW42c29jcjd4aG5jbGZubW12c2tnZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nP8zrCOp5plDf7DNjr/giphy.gif"
+  },
+  {
+    question: "Quando você pensa no nosso futuro, qual é a primeira cena que vem na sua cabeça?",
+    rewardMsg: "Adorei imaginar essa cena com você.",
+    rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmZyMW0wOW14d2llczBxcnA0ZHg3dm04NmFhc25zdnhoMHFuaG56MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/F7HZJkbC9piohwiR6N/giphy.gif"
+  },
+  {
+    question: "Qual música você acha que mais combina com a nossa história?",
+    rewardMsg: "Toda vez que essa música tocar, vou lembrar de você.",
+    rewardImg: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGJ2anI2MGU2Z2JmcGYweGF2N25uMHA2Mnc2Mm00NWlobmZhbTV4ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZJ1elswlnO1iFpq6Bn/giphy.gif"
+  },
+  {
+    question: "O que você mais ama em mim que não dá pra ver em foto nem em vídeo?",
+    rewardMsg: "Isso é exatamente o que eu mais quero cuidar em você.",
+    rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjNyY3d2NnR0MmFvbTd0bDRodW42c29jcjd4aG5jbGZubW12c2tnZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nP8zrCOp5plDf7DNjr/giphy.gif"
+  },
+  {
+    question: "Se pudesse fazer um pedido sobre nós dois e ter certeza que se realizaria, qual pedido você faria?",
+    rewardMsg: "Agora vou viver pra tentar realizar esse pedido.",
+    rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHJ2bDA5ZWd0N3NxdGZyeGtxOW0zb2RzbW1ub3J1NDV0bHQ4b2J0aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7wDm3KFvhpzfB8MJDh/giphy.gif"
+  },
+  {
+    question: "Então… topa continuar escrevendo essa história comigo, capítulo por capítulo, pelo resto da vida?",
+    rewardMsg: "Então vem, que nosso ‘felizes para sempre’ começa agora.",
+    rewardImg: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHJ2bDA5ZWd0N3NxdGZyeGtxOW0zb2RzbW1ub3J1NDV0bHQ4b2J0aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7wDm3KFvhpzfB8MJDh/giphy.gif"
+  }
 ];
 
 let currentLevel = 0;
@@ -82,7 +88,14 @@ function switchScreen(screenName) {
 }
 
 function startGame() {
-    currentLevel = 0;
+    loadProgress(); // Tenta carregar progresso salvo
+    
+    // Se o user já tiver completado tudo (currentLevel >= levels.length),
+    // ou se não tiver salvo, reinicia do 0.
+    if (!currentLevel || currentLevel >= levels.length) {
+        currentLevel = 0;
+    }
+    
     switchScreen('level');
     loadLevel();
     startMusic(); // Tenta iniciar a música quando o jogo começa
@@ -100,15 +113,33 @@ function loadLevel() {
     ui.question.innerText = levels[currentLevel].question;
     
     // Reseta UI
-    ui.input.value = "";
+    // Restaura resposta anterior se existir
+    const savedData = userAnswers[currentLevel];
+    ui.input.value = savedData ? savedData.answer : "";
+    
     ui.inputArea.classList.remove('hidden');
     ui.rewardArea.classList.add('hidden');
     ui.error.classList.add('hidden');
     ui.btn.innerText = "Responder";
+    
+    // Gerencia botão voltar
+    const prevBtn = document.getElementById('prev-btn');
+    if (prevBtn) {
+        if (currentLevel === 0) {
+            prevBtn.classList.add('hidden');
+        } else {
+            prevBtn.classList.remove('hidden');
+        }
+    }
+    
     ui.input.focus();
 }
 
 // ... existing code ...
+
+// Array para armazenar respostas
+// Array para armazenar respostas
+let userAnswers = new Array(levels.length);
 
 function checkAnswer() {
     // Se estiver na fase de recompensa (já acertou), vai pro próximo
@@ -117,16 +148,56 @@ function checkAnswer() {
         return;
     }
 
-    const userAnswer = ui.input.value.trim().toLowerCase();
-    
-    // Verifica se alguma palavra chave está na resposta
-    const currentKeywords = levels[currentLevel].keywords;
-    const isCorrect = currentKeywords.some(keyword => userAnswer.includes(keyword.toLowerCase()));
+    const userAnswer = ui.input.value.trim();
 
-    if (isCorrect && userAnswer.length > 0) {
+    // Aceita qualquer resposta que não esteja vazia
+    if (userAnswer.length > 0) {
+        // Salva a resposta no índice atual
+        userAnswers[currentLevel] = {
+            question: levels[currentLevel].question,
+            answer: userAnswer
+        };
+        
+        saveProgress(); // Salva no localStorage
         showReward();
     } else {
         shakeError();
+    }
+}
+
+function prevLevel() {
+    if (currentLevel > 0) {
+        currentLevel--;
+        loadLevel();
+    }
+}
+
+function saveProgress() {
+    const data = {
+        currentLevel: currentLevel + 1, // Salva o próximo nível, pois o atual já foi respondido
+        userAnswers: userAnswers
+    };
+    localStorage.setItem('casalQuizProgress', JSON.stringify(data));
+    
+    // Tenta salvar no GitHub se configurado (Assíncrono)
+    saveToGitHub(data); 
+}
+
+function loadProgress() {
+    const saved = localStorage.getItem('casalQuizProgress');
+    if (saved) {
+        try {
+            const data = JSON.parse(saved);
+            // Restaura apenas se não tiver terminado o jogo
+            if (data.currentLevel < levels.length) {
+                currentLevel = data.currentLevel;
+                userAnswers = data.userAnswers || [];
+                // Se já tiver progresso, pode pular a tela inicial se quiser, 
+                // mas vamos manter o fluxo normal, só atualizando o nível quando der Start
+            }
+        } catch (e) {
+            console.error("Erro ao carregar progresso:", e);
+        }
     }
 }
 
@@ -142,6 +213,10 @@ function showReward() {
     
     ui.btn.innerText = "Próxima >>";
     
+    // Esconde botão voltar durante recompensa
+    const prevBtn = document.getElementById('prev-btn');
+    if(prevBtn) prevBtn.classList.add('hidden');
+    
     // Efeito sonoro sutil (opcional, navegadores bloqueiam autoplay as vezes)
     // aqui focamos no visual
     confetti({
@@ -153,6 +228,7 @@ function showReward() {
 }
 
 function shakeError() {
+    // ... existing code ...
     ui.error.classList.remove('hidden');
     
     // Remove a classe de animação e adiciona de novo para re-tocar
@@ -171,10 +247,55 @@ function nextLevel() {
     }
 }
 
+// ... existing code ...
+
 function finishGame() {
     switchScreen('final');
     launchConfetti();
+    // Opcional: Auto-download ao finalizar ou esperar clique do botão
+    // downloadAnswers(); 
 }
+
+async function saveToGitHub(data) {
+    // ⚠️ CONFIGURAÇÃO DO GITHUB ⚠️
+    // Para funcionar, você precisa criar um Token no GitHub (Settings > Developer Settings > Personal Access Tokens)
+    // E criar um repositório chamado 'quiz-respostas' (ou outro nome)
+    const GITHUB_TOKEN = "SEU_TOKEN_AQUI"; // CUIDADO: Não compartilhe esse código publicamente com o token real!
+    const REPO_OWNER = "SEU_USUARIO";
+    const REPO_NAME = "quiz-respostas";
+    const FILE_PATH = `respostas_${new Date().getTime()}.json`; // Salva um arquivo novo por vez
+
+    if (GITHUB_TOKEN === "SEU_TOKEN_AQUI") {
+        console.log("GitHub Token não configurado. Salvando apenas localmente.");
+        return;
+    }
+
+    const content = btoa(JSON.stringify(data, null, 2)); // Coverte para Base64
+
+    try {
+        const response = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`, {
+            method: 'PUT',
+            headers: {
+                'Authorization': `token ${GITHUB_TOKEN}`,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                message: "Nova resposta do quiz ❤️",
+                content: content
+            })
+        });
+
+        if (response.ok) {
+            console.log("Salvo no GitHub com sucesso!");
+        } else {
+            console.error("Erro ao salvar no GitHub:", await response.text());
+        }
+    } catch (e) {
+        console.error("Erro de conexão com GitHub:", e);
+    }
+}
+
+// ... existing code ...
 
 function launchConfetti() {
     var end = Date.now() + (3 * 1000); // 3 segundos
@@ -257,30 +378,41 @@ function startMusic() {
     if (!isPlaying) {
         audio.play().then(() => {
             isPlaying = true;
-            const btn = document.getElementById('music-btn');
-            if(btn) {
-                btn.innerText = "⏸️";
-                btn.classList.add('playing');
-            }
-        }).catch(e => console.log("Autoplay bloqueado pelo navegador até interação do usuário"));
+            updateMusicButtonState();
+        }).catch(e => console.log("Autoplay bloqueado/interrompido:", e));
+    }
+}
+
+function updateMusicButtonState() {
+    const btn = document.getElementById('music-btn');
+    if(btn) {
+        if (isPlaying) {
+            btn.innerText = "⏸️";
+            btn.classList.add('playing');
+        } else {
+            btn.innerText = "🎵";
+            btn.classList.remove('playing');
+        }
     }
 }
 
 function toggleMusic() {
     initAudio();
     
-    const btn = document.getElementById('music-btn');
-    
     if (isPlaying) {
         audio.pause();
-        btn.innerText = "🎵";
-        btn.classList.remove('playing');
+        isPlaying = false;
+        updateMusicButtonState();
     } else {
-        audio.play();
-        btn.innerText = "⏸️";
-        btn.classList.add('playing');
+        audio.play().then(() => {
+            isPlaying = true;
+            updateMusicButtonState();
+        }).catch(e => {
+            console.error("Erro ao reproduzir música:", e);
+            isPlaying = false;
+            updateMusicButtonState();
+        });
     }
-    isPlaying = !isPlaying;
 }
 
 // POEMAS
