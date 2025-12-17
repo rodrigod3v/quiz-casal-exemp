@@ -26,8 +26,8 @@
         <section id="start-screen" class="screen active">
             <div class="icon-header">👀</div>
             <h1>Oi, meu amor!</h1>
-            <p>Se você acertar algumas perguntinhas sobre nós, tem um prêmio especial te esperando.</p>
-            <button onclick="startGame()" class="btn-primary">Aceito o desafio</button>
+            <p>Vamos conversar um pouquinho?</p>
+            <button onclick="startGame()" class="btn-primary">Vamos</button>
         </section>
 
         <!-- TELA DE PERGUNTAS -->
@@ -52,22 +52,28 @@
                 </div>
             </div>
 
-            <button id="action-btn" onclick="checkAnswer()" class="btn-primary">Responder</button>
+            <div class="navigation-area" style="display: flex; gap: 10px; margin-top: 20px;">
+                <button id="prev-btn" onclick="prevLevel()" class="btn-secondary hidden" style="flex: 1;">&laquo;
+                    Voltar</button>
+                <button id="action-btn" onclick="checkAnswer()" class="btn-primary" style="flex: 1;">Próxima
+                    &raquo;</button>
+            </div>
         </section>
 
         <!-- TELA FINAL -->
         <section id="final-screen" class="screen">
-            <div class="icon-header">🏆</div>
-            <h1>Mandou bem demais!</h1>
-            <p>Uau, você lembra mesmo!</p>
+            <div class="icon-header">💖</div>
+            <h1>Você é incrível...</h1>
+            <p>Relembrar nossa história me faz ter certeza de que fiz a escolha certa.</p>
 
             <div class="final-reward-box">
-                <p>Como prêmio, tenho algo pra você...</p>
+                <p>Mas não é só sobre o que vivemos, é sobre quem você é. <br>Separei alguns detalhes seus que eu amo...
+                </p>
             </div>
 
             <button onclick="showScreen('activities')" class="btn-primary"
                 style="margin-top: 15px; display: inline-block;">
-                VER
+                Ver o que eu amo em você
             </button>
         </section>
 
