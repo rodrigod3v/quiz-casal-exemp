@@ -96,10 +96,6 @@ body {
     p {
         margin-bottom: 0.8rem;
     }
-
-    .image-reward {
-        height: 120px;
-    }
 }
 
 .screen {
@@ -251,20 +247,28 @@ input[type="text"]:focus {
 }
 
 /* Rewards (Imagens/Gifs) */
-.image-reward {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 16px;
-    margin: 10px 0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
+/* Rewards (Text Only now) */
+/* .image-reward removed */
 
 #reward-msg {
     color: var(--primary-color);
-    font-weight: 700;
-    font-size: 1.2rem;
-    margin: 10px 0 20px 0;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 20px 0;
+    line-height: 1.5;
+    background: rgba(108, 92, 231, 0.1);
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(108, 92, 231, 0.2);
+    /* "Speech bubble" look */
+    position: relative;
+}
+
+#reward-msg::before {
+    content: "💬";
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 /* Helpers */
